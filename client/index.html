@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <title>TestMint</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&amp;subset=latin-ext" rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link href="assets/css/libs.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="./libs/mdb-ui-kit/css/mdb.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Theme styles -->
+    <link href="assets/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script data-require="jquery@3.1.1" data-semver="3.1.1"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <center>
+        <section id="Utility">
+            <div class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="about-me">
+
+                            </div>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <!-- CONNECTECT ACCOUNT AREA -->
+                                        <div id="prepare" class="connect_area1">
+                                            <div class="connect_area2">
+                                                <div class=" nav_connect d-flex justify-content-between">
+                                                    <h1 class="mint_h1">
+                                                        MINT
+                                                    </h1>
+
+                                                    <h3 class="mint_h2">
+                                                        TOTAL SUPPLY: 10000
+                                                    </h3>
+                                                </div>
+
+                                                <div class="button_area">
+                                                    <button class="button_connect" id="btn-connect">
+
+                                                        Connect wallet
+
+                                                    </button>
+                                                </div>
+                                                <div class="social_icons">
+                                                    <div class="instagram">
+                                                        <a href="#"><i class='bx bxl-instagram social_icons_navbar'
+                                                                style="font-size:30px" </i></i></a>
+                                                    </div>
+                                                    <div class="discord">
+                                                        <a href="#"><i class='bx bxl-discord-alt social_icons_navbar '
+                                                                style="font-size:30px"></i></a>
+                                                    </div>
+                                                    <div class="instagram">
+                                                        <a href="#"><i class='bx bxl-twitter social_icons_navbar'
+                                                                style="font-size:30px" </i></i></a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <p class="remember"> <b>MAKE SURE YOU ARE CONNECTED TO THE ETHEREUM
+                                                    MAINNET</b></p>
+                                        </div>
+
+                                        <!-- CONNECTED AREA -->
+                                        <div id="connected" class="mint_area" style="display: none">
+                                            <div class="nav_mint">
+                                                <h1 class="mint_h1_mint_section">
+                                                    MINT
+
+                                                </h1>
+
+
+                                                <div class="mint_h2_mint_section">
+                                                    <h2 class="mint_h2_mint_section">
+                                                        MINTED:&nbsp;<b><span id="minted"></span> / 6250</b>
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <!-- <div id="network">
+                                                    <p>
+                                                        <b>CONNECTED NETWORK: </b><span id="network-name"></span>
+                                                    </p>
+
+                                                </div> -->
+
+                                            <h5
+                                                style="display: flex; justify-content: center; color: white; padding-bottom: 20px;">
+                                                Price:
+                                                <span id="demo" style="margin-left: 10px;"></span>ETH | Max 2
+                                            </h5>
+                                            <!-- <input style="border: 2px solid red;
+                                                        margin: 20px;
+                                                        width: 80px;
+                                                        border-radius: 5px;" type="number" name="minPrice"> -->
+                                            <div class="quantity buttons_added mint_num">
+                                                <!-- <input type="button" value="" class="minus minus_button"> -->
+                                                <button type="button" value="" class="minus minus_button"><i
+                                                        class='bx bxs-left-arrow'></i></button>
+                                                <input id="minPrice" type="number" step="1" min="1" max="2" value="1"
+                                                    name="quantity" title="Qty" class="input-text qty text mint_qty"
+                                                    size="4" pattern="" inputmode="">
+                                                <button type="button" value=">" class="plus plus_button"><i
+                                                        class='bx bxs-right-arrow'></i></button>
+                                                <!-- <input type="button" value=">" class="plus plus_button"> -->
+                                            </div>
+                                            <div id="mintPrice">
+                                                <div class="inline-block btn-gradient p-0.5 btn-animate max-w-max">
+
+                                                    <button target="_blank" class="mint_button"
+                                                        onclick="mintToken()"><span>MINT NOW</span>
+                                                    </button>
+                                                </div>
+
+
+                                                <div id="error" style="display: none; margin-top: 25px;"
+                                                    class="alert alert-danger" role="alert"></div>
+
+                                                <br>
+
+                                                <table class="">
+
+
+                                                    <tbody id="accounts" style="color: #ffff; font-size: 0px;">
+                                                    </tbody>
+                                                </table>
+                                                <div id="network">
+                                                    <p>
+                                                        <b><span id="selected-account"
+                                                                style="font-size: 13px;"></span></b>
+                                                    </p>
+                                                </div>
+                                                <!-- <p> <b>PUBLIC SALE IS NOW ACTIVE</b></p> -->
+                                                <div class="social_icons">
+                                                    <div class="instagram">
+                                                        <a href="#"><i class='bx bxl-instagram social_icons_navbar'
+                                                                style="font-size:30px" </i></i></a>
+                                                    </div>
+                                                    <div class="discord">
+                                                        <a href="#"><i class='bx bxl-discord-alt social_icons_navbar '
+                                                                style="font-size:30px"></i></a>
+                                                    </div>
+
+                                                    <div class="discord">
+                                                        <a href="#"><i class='bx bxl-twitter social_icons_navbar '
+                                                                style="font-size:30px"></i></a>
+                                                    </div>
+
+                                                </div>
+                                                <p class="remember_mint"> <b>MAKE SURE YOU ARE CONNECTED TO THE ETHEREUM
+                                                        MAINNET</b></p>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- We use simple <template> templating for the example -->
+                                        <div id="templates" style="display: none">
+                                            <template id="template-balance">
+                                                <tr>
+                                                    <th class="address"></th>
+                                                    <td class="balance"></td>
+                                                </tr>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+    </center>
+    <!-- ========================================= ABOUT ME SECTION :END ========================================= -->
+    <!-- ========================================= PAGE FOOTER ========================================= -->
+    <!-- <footer>
+            <div class="container">
+                <div class="flex-row">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="assets/images/iax.png" style="width: 30px;" alt="Tej">
+                        <div class="copyrights">© 2022 NAME PROJECT - ALL RIGHTS RESERVED</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="footer-socials">
+                            <a href="https://twitter.com"><i class="fa fa-twitter-square"
+                                    aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com"><i class="fa fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
+    <!-- ========================================= PAGE FOOTER :END ========================================= -->
+    </div>
+    <!-- Configuration file -->
+    <script src="settings/config.js"></script>
+    <script>
+        function wcqib_refresh_quantity_increments() {
+            jQuery("div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)").each(function (a, b) {
+                var c = jQuery(b);
+                c.addClass("buttons_added"), c.children().first().before('<input type="button" value="-" class="minus" />'), c.children().last().after('<input type="button" value="+" class="plus" />')
+            })
+        }
+        String.prototype.getDecimals || (String.prototype.getDecimals = function () {
+            var a = this,
+                b = ("" + a).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+            return b ? Math.max(0, (b[1] ? b[1].length : 0) - (b[2] ? +b[2] : 0)) : 0
+        }), jQuery(document).ready(function () {
+            wcqib_refresh_quantity_increments()
+        }), jQuery(document).on("updated_wc_div", function () {
+            wcqib_refresh_quantity_increments()
+        }), jQuery(document).on("click", ".plus, .minus", function () {
+            var a = jQuery(this).closest(".quantity").find(".qty"),
+                b = parseFloat(a.val()),
+                c = parseFloat(a.attr("max")),
+                d = parseFloat(a.attr("min")),
+                e = a.attr("step");
+            b && "" !== b && "NaN" !== b || (b = 0), "" !== c && "NaN" !== c || (c = ""), "" !== d && "NaN" !== d || (d = 0), "any" !== e && "" !== e && void 0 !== e && "NaN" !== parseFloat(e) || (e = 1), jQuery(this).is(".plus") ? c && b >= c ? a.val(c) : a.val((b + parseFloat(e)).toFixed(e.getDecimals())) : d && b <= d ? a.val(d) : b > 0 && a.val((b - parseFloat(e)).toFixed(e.getDecimals())), a.trigger("change")
+        });
+    </script>
+
+    <script>
+        // Overwriting default value of Preloader duration
+        window.Config.preloader.duration = 1500;
+    </script>
+    <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+    <script type="text/javascript"
+        src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+    <!-- Application scripts -->
+    <script type="text/javascript" src="./real.js"></script>
+    <script type="text/javascript" src="./mainnet.js"></script>
+
+</body>
+
+</html>

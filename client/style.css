@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+p {
+    color: white;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.section {
+    background-image: url(assets/images/test.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100vh;
+
+}
+
+
+.connect_area1 {
+    background-color: rgb(0, 0, 0, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(7px);
+    max-width: 500px;
+    border-radius: 30px;
+    margin-top: 175px;
+}
+
+.connect_area2 {
+    padding: 30px 20px 25px 20px;
+}
+
+.nav_connect {
+    max-width: 90%;
+    align-items: center;
+}
+
+.mint_h1 {
+    color: white;
+    font-weight: 800;
+    font-size: 30px;
+
+}
+
+.mint_h2 {
+    color: white;
+    margin-right: 0%;
+
+}
+
+.button_area {
+    padding: 30px 0 15px 0;
+
+}
+
+.button_connect {
+    padding: 15px 40px;
+    border-radius: 30px;
+
+}
+
+.discord {
+    margin: 15px 10px 20px 15px;
+    vertical-align: middle;
+    display: inline;
+
+}
+
+.instagram {
+    margin: 25px 10px 20px 15px;
+    vertical-align: middle;
+    display: inline;
+}
+
+.social_icons_navbar {
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+    margin: 25px 10px 20px 15px;
+}
+
+.remember {
+    padding: 0 0 20px 0;
+}
+
+.mint_area {
+    background-color: rgb(0, 0, 0, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    max-width: 500px;
+    border-radius: 30px;
+    margin-top: 175px;
+}
+
+.mint_num {
+    padding-bottom: 20px;
+}
+
+.mint_qty {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+}
+
+.minus_button {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.plus_button {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+
+.mint_h1_mint_section {
+    color: white;
+    font-weight: 800;
+    padding: 20px 30px 15px 30px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 0%;
+    font-size: 30px;
+}
+
+.mint_h2_mint_section {
+    color: white;
+    padding: 20px 10px 15px 40px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 0%;
+}
+
+.mint_area {
+    padding: 10px 0 5px 0;
+
+}
+
+.mint_button {
+    padding: 15px 40px;
+    border-radius: 30px;
+
+}
+
+.discord {
+    margin: 15px 10px 20px 15px;
+    vertical-align: middle;
+    display: inline;
+
+}
+
+.instagram {
+    margin: 25px 10px 20px 15px;
+    vertical-align: middle;
+    display: inline;
+}
+
+.social_icons_navbar {
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+    margin: 25px 10px 20px 15px;
+}
+
+.remember_mint {
+    padding: 10px 0;
+}
